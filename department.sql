@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS DEPARTMENT RESTRICT;
+
+CREATE TABLE DEPARTMENT (
+  Dname        VARCHAR(25)	NOT NULL,
+  Dnumber      INTEGER(4) 	NOT NULL,
+  Mgrssn       CHAR(9) 		NOT NULL, 
+  Mgrstartdate DATE,
+  PRIMARY KEY (Dnumber),
+  UNIQUE (Dname)
+);

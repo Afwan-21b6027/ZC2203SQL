@@ -1,0 +1,17 @@
+DROP TABLE IF EXISTS EMPLOYEE RESTRICT;
+
+CREATE TABLE EMPLOYEE (
+  Fname    VARCHAR(15) NOT NULL, 
+  Minit    VARCHAR(1),
+  Lname    VARCHAR(15) NOT NULL,
+  Ssn      CHAR(9),
+  Bdate    DATE,
+  Address  VARCHAR(50),
+  Sex      CHAR,
+  Salary   DECIMAL(10,2),
+  Superssn CHAR(9),
+  Dno      INT(4),
+  PRIMARY KEY (Ssn),
+  FOREIGN KEY (Superssn) REFERENCES EMPLOYEE(Ssn),
+  FOREIGN KEY (Dno) REFERENCES DEPARTMENT(Dnumber)
+);

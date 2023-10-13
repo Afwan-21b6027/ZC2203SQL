@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS DEPENDENTS RESTRICT;
+
+CREATE TABLE DEPENDENTS(
+    Essn CHAR(9) NOT NULL,
+    Dependent_Name VARCHAR(25) NOT NULL,
+    SEX CHAR,
+    BDate DATE,
+    Relationship VARCHAR(8),
+    PRIMARY KEY (Essn, Dependent_Name),
+    FOREIGN Key (Essn) REFERENCES EMPLOYEE(Ssn)
+);
